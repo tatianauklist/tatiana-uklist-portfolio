@@ -1,7 +1,7 @@
 # Portfolio & Blog
 
-A Next.js (App Router, plain JavaScript) portfolio site with a Markdown-powered blog, built for
-static export and deployment on Azure Static Web Apps.
+A Next.js (App Router, plain JavaScript) portfolio site with a Markdown-powered blog, styled as a
+library card-catalog theme, built for static export and deployment on Azure Static Web Apps.
 
 ## Local development
 
@@ -11,6 +11,21 @@ npm run dev
 ```
 
 Visit `http://localhost:3000`.
+
+## Personalizing the site
+
+- **Work section** (`/work` and the Home page preview): edit the placeholder entries in
+  [`lib/work.js`](lib/work.js) — each project is a plain object (`title`, `tag`, `blurb`, `accent`
+  `"maroon"`/`"green"`, `stats`). Add, remove, or reorder entries freely; the Home page always shows
+  the first 3.
+- **About page** bio: edit the three placeholder paragraphs directly in
+  [`app/about/page.js`](app/about/page.js), and swap the LinkedIn/Mastodon `#` placeholder links for
+  real ones.
+- **Contact email**: set in `CONTACT_EMAIL` at the top of
+  [`app/contact/page.js`](app/contact/page.js) (currently `tati@theguys.io`). The form submits via
+  a `mailto:` action (opens the visitor's email client) since this is a static site with no
+  backend — swap it for a real form handler (e.g. an Azure Function) later if you want in-page
+  submission.
 
 ## Writing blog posts
 
@@ -22,6 +37,7 @@ title: My New Post
 published_date: 2026-08-20
 category: Notes
 description: A one-line summary shown in the post list and search results.
+readtime: 5 min
 draft: false
 ---
 
@@ -29,7 +45,8 @@ Post body goes here, in Markdown.
 ```
 
 Set `draft: true` to keep a post out of the published list while it's still a work in progress.
-The file's slug (used in the URL, `/blog/<slug>`) is the filename without `.md`.
+The file's slug (used in the URL, `/blog/<slug>`) is the filename without `.md`. `readtime` is
+optional — if you leave it out, it's estimated automatically from the post's word count.
 
 Post images go in `public/blog/<slug>/`, referenced with an absolute path in the Markdown, e.g.
 `![alt text](/blog/my-new-post/cover.png)`.

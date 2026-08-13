@@ -1,9 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200">
-      <div className="mx-auto max-w-3xl px-6 py-8 text-sm text-slate-500">
-        © {new Date().getFullYear()} Your Name. Built with Next.js.
-      </div>
+    <footer className="callno flex justify-between border-t-2 border-borderStrong px-14 py-7 text-muted">
+      <span>© {new Date().getFullYear()} TATIANA UKLIST</span>
+      <span>COMMUNITY &amp; GENERAL WRITING</span>
     </footer>
   );
 }

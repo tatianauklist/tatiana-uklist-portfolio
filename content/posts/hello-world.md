@@ -1,7 +1,7 @@
 ---
 title: Hello, World
 published_date: 2026-08-12
-category: Meta
+category: Thoughts
 description: The first post on this brand new blog.
 draft: false
 ---
