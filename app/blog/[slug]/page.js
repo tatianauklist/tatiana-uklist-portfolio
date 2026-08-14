@@ -32,15 +32,15 @@ export default function BlogPostPage({ params }) {
 
   return (
     <>
-      <article className="mx-auto max-w-[720px] px-6 pb-16 pt-20">
+      <article className="mx-auto max-w-[720px] px-5 pb-14 pt-12 sm:px-6 sm:pt-16 lg:pt-20">
         <Link href="/blog" className="callno">
           &larr; BACK TO CATALOG
         </Link>
-        <div className="callno mb-4 mt-9 uppercase tracking-[0.05em] text-green">{post.category}</div>
-        <h1 className="mb-[22px] font-serif text-[38px] font-medium leading-[1.25] text-ink">
+        <div className="callno mb-4 mt-8 uppercase tracking-[0.05em] text-green sm:mt-9">{post.category}</div>
+        <h1 className="mb-[22px] font-serif text-[28px] font-medium leading-[1.25] text-ink sm:text-[32px] lg:text-[38px]">
           {post.title}
         </h1>
-        <div className="callno mb-11 flex items-center gap-3.5 border-b-2 border-borderStrong pb-8 text-muted">
+        <div className="callno mb-9 flex flex-wrap items-center gap-x-3.5 gap-y-2 border-b-2 border-borderStrong pb-6 text-muted sm:mb-11 sm:pb-8">
           <div className="h-[34px] w-[34px] flex-none rounded-full border border-borderc bg-borderc" />
           <span>TATIANA UKLIST</span>
           <span>&middot;</span>
@@ -48,13 +48,13 @@ export default function BlogPostPage({ params }) {
           <span>&middot;</span>
           <span>{post.readtime}</span>
         </div>
-        <StripeThumb variant={post.stripe} label={post.category} className="mb-11 h-[320px]" />
+        <StripeThumb variant={post.stripe} label={post.category} className="mb-9 h-[220px] sm:mb-11 sm:h-[320px]" />
         <div
-          className="prose prose-lg max-w-none"
+          className="prose prose-base max-w-none sm:prose-lg"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>
-      <section className="mx-auto max-w-[720px] px-6 pb-[120px]">
+      <section className="mx-auto max-w-[720px] px-5 pb-20 sm:px-6 sm:pb-[120px]">
         <div className="border border-borderDashed px-[22px] py-[18px]">
           <div className="callno mb-3 uppercase tracking-[0.06em] text-muted">Date Due Stamps</div>
           <div className="flex flex-wrap gap-2.5">

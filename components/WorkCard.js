@@ -2,12 +2,18 @@ import StripeThumb from './StripeThumb';
 
 const accentClass = { maroon: 'text-maroon', green: 'text-green' };
 
-export default function WorkCard({ variant = 'compact', num, title, tag, blurb, accent, stripe, stats = [] }) {
+export default function WorkCard({ variant = 'compact', num, title, tag, blurb, accent, stripe, stats = [], href }) {
   const accentCls = accentClass[accent] || 'text-maroon';
 
   if (variant === 'full') {
+    const CardTag = href ? 'a' : 'div';
+    const linkProps = href ? { href, target: '_blank', rel: 'noreferrer' } : {};
+
     return (
-      <div className="relative flex flex-col rounded border border-borderc border-t-[3px] border-t-borderDashed bg-surface shadow-[0_1px_4px_rgb(0_0_0/0.05)]">
+      <CardTag
+        {...linkProps}
+        className="relative flex flex-col rounded border border-borderc border-t-[3px] border-t-borderDashed bg-surface shadow-[0_1px_4px_rgb(0_0_0/0.05)]"
+      >
         <div className="punch absolute left-3.5 top-3.5 z-[1]" />
         <StripeThumb variant={stripe} label={tag} className="m-5 mb-0 h-[190px]" />
         <div className="p-[22px]">
@@ -17,15 +23,16 @@ export default function WorkCard({ variant = 'compact', num, title, tag, blurb, 
           </div>
           <div className="mb-2 font-serif text-xl font-medium text-ink">{title}</div>
           <div className="mb-3.5 text-[14.5px] leading-relaxed text-bodyMuted">{blurb}</div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {stats.map((stat) => (
               <span key={stat} className="callno rounded border border-borderDashed px-2.5 py-1 text-body">
                 {stat}
               </span>
             ))}
+            {href && <span className="callno ml-auto text-maroon">VIEW &rarr;</span>}
           </div>
         </div>
-      </div>
+      </CardTag>
     );
   }
 

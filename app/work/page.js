@@ -10,17 +10,17 @@ export default function WorkPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-[1120px] px-14 pb-5 pt-20">
+      <section className="mx-auto max-w-[1120px] px-5 pb-5 pt-12 sm:px-8 sm:pt-16 lg:px-14 lg:pt-20">
         <p className="callno mb-4 uppercase tracking-[0.05em] text-green">Drawer 2 — Work</p>
-        <h1 className="mb-5 font-serif text-[42px] font-medium text-ink">
+        <h1 className="mb-5 font-serif text-3xl font-medium text-ink sm:text-4xl lg:text-[42px]">
           Programs, launches, and the odd rescue mission.
         </h1>
-        <p className="mb-14 max-w-[600px] text-[17px] leading-relaxed text-bodyMuted">
+        <p className="mb-10 max-w-[600px] text-base leading-relaxed text-bodyMuted sm:mb-14 sm:text-[17px]">
           A sample of community and content work — replace these with your own projects in{' '}
           <code>lib/work.js</code>.
         </p>
       </section>
-      <section className="mx-auto grid max-w-[1120px] grid-cols-2 gap-8 px-14 pb-[110px]">
+      <section className="mx-auto grid max-w-[1120px] grid-cols-1 gap-6 px-5 pb-16 sm:grid-cols-2 sm:gap-8 sm:px-8 lg:px-14 lg:pb-[110px]">
         {work.map((proj) => (
           <WorkCard key={proj.num} variant="full" {...proj} />
         ))}
