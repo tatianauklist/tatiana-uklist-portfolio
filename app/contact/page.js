@@ -6,13 +6,13 @@ const CONTACT_EMAIL = 'tati@theguys.io';
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-[620px] px-6 pb-[140px] pt-[90px]">
-      <div className="border border-borderDashed bg-surface p-11">
-        <div className="mb-2 flex items-baseline justify-between">
+    <section className="mx-auto max-w-[620px] px-5 pb-20 pt-12 sm:px-6 sm:pb-[140px] sm:pt-[90px]">
+      <div className="border border-borderDashed bg-surface p-6 sm:p-11">
+        <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
           <p className="callno uppercase tracking-[0.05em] text-green">Request Slip</p>
           <span className="callno text-muted">FORM 14-B</span>
         </div>
-        <h1 className="mb-4 font-serif text-[34px] font-medium text-ink">Say hello.</h1>
+        <h1 className="mb-4 font-serif text-3xl font-medium text-ink sm:text-[34px]">Say hello.</h1>
         <p className="mb-9 text-base leading-relaxed text-bodyMuted">
           Speaking, writing collabs, or just want to talk about community — my inbox is open.
         </p>
