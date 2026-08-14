@@ -23,18 +23,18 @@ export default function AboutPage() {
             incident, not during it.
           </p>
           <p className="mb-5">
-            This paragraph is a placeholder. Swap it for a couple of sentences about how you got
-            here — the roles, the turns, the thing that made you care about this work.
+            I started my career building community on college campuses in the nonprofit world — the kind of work where you learn that most problems are really people problems, and the best solutions come from getting everyone in a room (or a Discord).
+            Then 2020 happened, and I pivoted into cybersecurity. Turns out the same instincts that worked for building campus communities work just as well for building security ones. I found my people, and I haven't looked back.
+            
           </p>
           <p className="mb-5">
-            Another placeholder: use this space for something outside of work — what you read,
-            build, or think about when you&apos;re not doing the day job.
+            These days, when I'm not wrangling cats — er, organizing community events and live hacking competitions — you'll find me deep in whatever book series has hijacked my brain (currently: Dungeon Crawler Carl, no regrets) or unwinding on my Steam Deck as a farmer, fisherman, or librarian. Turns out after a day of thinking about threat models, there's nothing quite like the low stakes of a fictional harvest.
+            I like building things — communities, defenses, events — and I'm always up for the next adventure.
           </p>
         </div>
         <div className="callno mt-8 flex gap-6">
           <Link href="/contact">GET IN TOUCH &rarr;</Link>
-          <a href="#">LINKEDIN</a>
-          <a href="#">MASTODON</a>
+          <a href="https://www.linkedin.com/in/tatianauklist/">LINKEDIN</a>
         </div>
       </div>
     </section>
